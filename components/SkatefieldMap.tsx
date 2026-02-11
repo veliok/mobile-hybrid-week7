@@ -8,6 +8,7 @@ interface Props {
 }
 
 export function SkatefieldMap({ data }: Props) {
+  // Kartalta valittu kenttä
   const [selectedField, setSelectedField] = useState<Skatefield | null>(null);
 
   return (
@@ -15,7 +16,7 @@ export function SkatefieldMap({ data }: Props) {
       <MapView 
         style={styles.map}
         initialRegion={{
-          latitude: 65.0121, longitude: 25.4651,
+          latitude: 65.0000, longitude: 25.5000,
           latitudeDelta: 0.2, longitudeDelta: 0.2
         }}
       >
@@ -23,15 +24,11 @@ export function SkatefieldMap({ data }: Props) {
           <Marker
             key={field.id}
             coordinate={{latitude: field.latitude, longitude: field.longitude }}
-        
             pinColor={
               field.maintenanceDelta < 24 ? "green" :
               field.maintenanceDelta < 168 ? "orange" : "red"
             }
-            onPress={(f) => {
-                f.stopPropagation();
-                setSelectedField(field);
-              }}
+            onPress={() => setSelectedField(field)}
           />
         ))}
       </MapView>

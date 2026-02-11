@@ -25,15 +25,16 @@ export function useSkatefield() {
         throw new Error(`Network response error: ${res.status} ${res.statusText}`);
       }
       
+      /*
+        Data on FeatureCollection objekti, jonka sisällä on features taulukko.
+        Apufunktiot ottavat parametrinä taulukon yhden alkion kerrallaan, (SkatefieldReturn).
+      */
       const data = await res.json();
       
-      /*
-        Suodatetaan palautuksesta luistelukentät, data sisältää myös ladut ja 
-        mapataan Skatefield typeen.
-      */
+      // Suodatetaan 
       const fields = data.features
-        .filter(isSkatefield)
-        .map(toSkatefield);
+        .filter(isSkatefield) // Poistetaan ladut ja  muut koordinaattimuodot
+        .map(toSkatefield); // Muutetaan Skatefield-tyyppiin
       
       setSkatefields(fields);
       
