@@ -13,6 +13,7 @@ App.tsx
 
 ## Sovelluksen idea
 Näyttää kartalla Oulun luistelukenttien huoltotilanne.
+---
 ![kuva1](/docs/1.png "kuva1")
 ![kuva2](/docs/2.png "kuva2")
 
