@@ -13,6 +13,8 @@ App.tsx
 
 ## Sovelluksen idea
 Näyttää kartalla Oulun luistelukenttien huoltotilanne.
+![kuva1](/docs/1.png "kuva1")
+![kuva2](/docs/2.png "kuva2")
 
 ## Tietoa rajapinnasta
 Alkuperäisenä ajatuksena oli käyttää Oulun avoimen datan hiihtolatujen ja luistelukenttien [kunnossapitorajapintaa](https://data.ouka.fi/data/fi/dataset/oulun-seudun-hiihtolatujen-ja-luistelukenttien-kunnossapitorajapinta/resource/b794a8b3-008e-4a11-8ff2-12a6d9d26d46).
